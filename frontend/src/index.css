@@ -1,0 +1,179 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+header {
+  background: #fff;
+}
+
+/* Middle container = 1400px (max-width)
+   but the mon = 1920 (when full screen) -> (1920-1400) = 520px spaces
+   
+   0 (上下) auto (左右) enables the spaces equally divided in left and right (left and right now both have 520/2= 260 spaces)
+*/
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 1400px;
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+}
+
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+
+/*padding: 20px -> home to pages have 20px spacing*/
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+
+/*
+margin: different workout details element spacing
+padding: each element spacing between its border
+*/
+.workout-details{
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/*top right bottom left*/
+.workout-details h4{
+  color: var(--primary);
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+/*margin: 0  -> remove the border of element*/
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* workout form */
+label, input {
+  display: block;
+  font-family: "Poppins";
+}
+
+.create input, .signup input, .login input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing:border-box;
+  margin-bottom: 20px;
+}
+
+/* button padding = words and border*/
+.create button, .signup button, .login button {
+  background: var(--primary);
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+}
+
+.input-group span{
+  display: none;
+}
+
+/*spacing between green button and warning*/
+div.error{
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius:4px;
+  margin: 20px;
+}
+
+.required label{
+  color: var(--error)
+}
+
+.required input{
+  border: 1px solid var(--error);
+  margin: 0;
+}
+
+.required span{
+  display: inline-block;
+  color: var(--error);
+  margin-bottom: 20px;
+}
+
+/* navbar */
+nav {
+  display:flex;
+  align-items: center;
+}
+
+nav a{
+  margin-left: 10px;
+}
+
+/* background: button color
+   color: font color */
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+/* auth forms */
+/* common: use comma */
+form.signup, form.login{
+  background: #fff;
+  max-width: 400px;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 4px;
+}
